@@ -1,0 +1,139 @@
+.header {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 0 40px 0;
+	}
+
+	&__info {
+		margin-right: -115px;
+	}
+
+	&__info-link {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		color: #4CB649;
+		padding: 11px 18px;
+		border: 1px solid #4CB649;
+		border-radius: 30px;
+	}
+
+	&__info-link+&__info-link {
+		margin-left: 10px;
+	}
+
+	&__info-link--active {
+		color: #fff;
+		background: linear-gradient(0deg, #4CB649 0%, #5DDF5A 100%);
+	}
+}
+
+.header__nav-btn {
+	width: 24px;
+	border: none;
+	background-color: inherit;
+	padding: 7px 0;
+	position: relative;
+	display: none;
+	&::after,
+	&::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: #22252E;
+	}
+	&::after {
+		bottom: 0;
+	}
+	&::before {
+		top: 0;
+	}
+	span {
+		display: block;
+		height: 2px;
+		background-color: #22252E;
+		border-radius: 3px;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item+&__item {
+		margin-left: 30px;
+	}
+
+	&__item-btn {
+		background-color: inherit;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 1px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url('../img/nav/header_arrow.svg');
+			background-repeat: no-repeat;
+			width: 10px;
+			height: 5px;
+			top: 6px;
+			right: -15px;
+		}
+	}
+
+	&__item-btn--active {
+		border-bottom: 3px solid #4CB649;
+	}
+}
+
+.menu__btn {
+	width: 35px;
+	border: none;
+	background-color: transparent;
+	padding: 10px 0;
+	cursor: pointer;
+	position: relative;
+	display: none;
+	z-index: 10;
+}
+
+.menu__btn::after,
+.menu__btn::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #22252E;
+
+}
+
+.menu__btn::before {
+	top: 0;
+}
+
+.menu__btn::after {
+	bottom: 0;
+}
+
+.menu__btn span {
+	display: block;
+	height: 2px;
+	background-color: #22252E;
+}

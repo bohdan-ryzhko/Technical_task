@@ -1,0 +1,97 @@
+.warning {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #22252E;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: center;
+	}
+
+	&__link {
+		a {
+			font-size: 12px;
+			line-height: 16px;
+			color: #889099;
+		}
+	}
+
+	&__link+&__link {
+		margin-left: 32px;
+	}
+
+	&__link--attention a {
+		color: #FF8D00;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 22px;
+			height: 19px;
+			background-image: url('../img/icon/red/alert.svg');
+			background-repeat: no-repeat;
+			left: -25px;
+			top: -3px;
+		}
+	}
+
+	&__link--active a {
+		color: #fff;
+	}
+
+	&__btn {
+		button {
+			background-color: inherit;
+			padding-right: 20px;
+
+		}
+	}
+}
+
+
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #323642;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.logo a {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	color: #000;
+}
+
+.addons__btn {
+	background-color: inherit;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 1px;
+	margin-right: 40px;
+	border-bottom: 1px solid #F7F7F7;
+
+	&:hover {
+		border-bottom: 1px solid #323642;
+	}
+}
